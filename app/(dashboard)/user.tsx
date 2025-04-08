@@ -14,6 +14,7 @@ import Link from 'next/link';
 export async function User() {
   let session = await auth();
   let user = session?.user;
+  let accountLabel = user?.name?.split(' ')[0] ?? "My Account";
 
   return (
     <DropdownMenu>
@@ -33,7 +34,7 @@ export async function User() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuLabel>My Account</DropdownMenuLabel>
+        <DropdownMenuLabel>{accountLabel}</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuItem>Settings</DropdownMenuItem>
         <DropdownMenuItem>Support</DropdownMenuItem>
