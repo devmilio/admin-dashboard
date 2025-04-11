@@ -33,6 +33,7 @@ import Providers from './providers';
 import { NavItem } from './nav-item';
 import { SearchInput } from './search';
 import { ModeToggle } from '@/components/ui/modetoggle';
+import { StripeConnectButton } from '@/components/ui/StripeConnectButton';
 
 export default function DashboardLayout({
   children
@@ -47,6 +48,7 @@ export default function DashboardLayout({
           <header className="sticky top-0 z-30 flex h-14 items-center gap-4 border-b bg-background px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
             <MobileNav />
             <DashboardBreadcrumb />
+            <StripeConnectButton/>
             <SearchInput />
             <ModeToggle/>
             <User />
